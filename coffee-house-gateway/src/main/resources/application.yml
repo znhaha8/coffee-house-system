@@ -1,0 +1,17 @@
+server:
+  port: 8002
+spring:
+  application:
+    name: coffee-zuul
+eureka:
+  client:
+    service-url:
+      defaultZone: http://server:8000/eureka/
+
+zuul:
+  prefix: /wyz
+  routes:
+    user:
+        path: /coffee-gateway/**
+        serviceId: eureka-client-coffee-gateway
+        strip-prefix: false

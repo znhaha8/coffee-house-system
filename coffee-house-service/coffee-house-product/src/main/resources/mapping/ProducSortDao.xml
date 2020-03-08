@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wyz.coffee.dao.ProductSortDao">
+
+  <select id="selectByName" parameterType="java.lang.String" resultMap="com.wyz.coffee.dao.generated.ProductSortMapper.BaseResultMap">
+    select
+    <include refid="com.wyz.coffee.dao.generated.ProductSortMapper.Base_Column_List" />
+    from tb_product_sort
+    where name like CONCAT(CONCAT('%', #{name,jdbcType=VARCHAR}), '%')
+  </select>
+
+  <select id="selectAll" resultMap="com.wyz.coffee.dao.generated.ProductSortMapper.BaseResultMap">
+    select
+    <include refid="com.wyz.coffee.dao.generated.ProductSortMapper.Base_Column_List" />
+    from tb_product_sort
+  </select>
+</mapper>

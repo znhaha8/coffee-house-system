@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wyz.coffee.dao.generated.UserCouponMapper">
+  <resultMap id="BaseResultMap" type="com.wyz.coffee.entity.UserCoupon">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="coupon_id" jdbcType="INTEGER" property="couponId" />
+    <result column="get_time" jdbcType="TIMESTAMP" property="getTime" />
+    <result column="destroy_time" jdbcType="TIMESTAMP" property="destroyTime" />
+    <result column="used" jdbcType="BIT" property="used" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, username, coupon_id, get_time, destroy_time, used
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from user_coupon
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from user_coupon
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.wyz.coffee.entity.UserCoupon">
+    insert into user_coupon (id, username, coupon_id, 
+      get_time, destroy_time, used
+      )
+    values (#{id,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{couponId,jdbcType=INTEGER}, 
+      #{getTime,jdbcType=TIMESTAMP}, #{destroyTime,jdbcType=TIMESTAMP}, #{used,jdbcType=BIT}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.wyz.coffee.entity.UserCoupon">
+    insert into user_coupon
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="username != null">
+        username,
+      </if>
+      <if test="couponId != null">
+        coupon_id,
+      </if>
+      <if test="getTime != null">
+        get_time,
+      </if>
+      <if test="destroyTime != null">
+        destroy_time,
+      </if>
+      <if test="used != null">
+        used,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="username != null">
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="couponId != null">
+        #{couponId,jdbcType=INTEGER},
+      </if>
+      <if test="getTime != null">
+        #{getTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="destroyTime != null">
+        #{destroyTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="used != null">
+        #{used,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.wyz.coffee.entity.UserCoupon">
+    update user_coupon
+    <set>
+      <if test="username != null">
+        username = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="couponId != null">
+        coupon_id = #{couponId,jdbcType=INTEGER},
+      </if>
+      <if test="getTime != null">
+        get_time = #{getTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="destroyTime != null">
+        destroy_time = #{destroyTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="used != null">
+        used = #{used,jdbcType=BIT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.wyz.coffee.entity.UserCoupon">
+    update user_coupon
+    set username = #{username,jdbcType=VARCHAR},
+      coupon_id = #{couponId,jdbcType=INTEGER},
+      get_time = #{getTime,jdbcType=TIMESTAMP},
+      destroy_time = #{destroyTime,jdbcType=TIMESTAMP},
+      used = #{used,jdbcType=BIT}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

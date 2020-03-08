@@ -1,0 +1,40 @@
+2020-02-18 10:33:48,721 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-02-18 10:33:59,323 INFO (StartupInfoLogger.java:61)- Started UserApplication in 14.711 seconds (JVM running for 17.496)
+2020-02-18 10:47:00,460 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-02-18 11:08:07,562 INFO (StartupInfoLogger.java:61)- Started UserApplication in 1270.42 seconds (JVM running for 1272.552)
+2020-02-18 11:13:12,534 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-02-18 11:14:56,122 INFO (StartupInfoLogger.java:61)- Started UserApplication in 107.594 seconds (JVM running for 109.309)
+2020-02-18 11:15:01,424 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select id, username, password, salt, nickname, phone, create_time, update_time, deleted from user where username = ? 
+2020-02-18 11:15:01,464 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: admin(String)
+2020-02-18 11:15:01,541 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2020-02-18 11:22:18,375 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-02-18 11:22:54,677 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select id, username, password, salt, nickname, phone, create_time, update_time, deleted from user where username = ? 
+2020-02-18 11:22:54,707 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: admin(String)
+2020-02-18 11:22:54,739 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2020-02-18 11:22:55,555 INFO (StartupInfoLogger.java:61)- Started UserApplication in 41.36 seconds (JVM running for 44.073)
+2020-02-18 11:23:16,268 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select id, username, password, salt, nickname, phone, create_time, update_time, deleted from user where username = ? 
+2020-02-18 11:23:16,269 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: wyz(String)
+2020-02-18 11:23:16,271 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2020-02-18 11:39:33,563 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select id, username, password, salt, nickname, phone, create_time, update_time, deleted from user where username = ? 
+2020-02-18 11:39:33,565 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: wyz(String)
+2020-02-18 11:39:33,567 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2020-02-18 11:45:42,141 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-02-18 11:45:52,113 INFO (StartupInfoLogger.java:61)- Started UserApplication in 14.656 seconds (JVM running for 16.136)
+2020-02-18 11:46:09,901 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select id, username, password, salt, nickname, phone, create_time, update_time, deleted from user where username = ? 
+2020-02-18 11:46:09,937 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: wyz(String)
+2020-02-18 11:46:09,966 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2020-02-18 17:26:52,647 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-02-18 17:27:08,220 INFO (StartupInfoLogger.java:61)- Started UserApplication in 21.505 seconds (JVM running for 26.662)
+2020-02-18 17:28:40,704 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select id, username, password, salt, nickname, phone, create_time, update_time, deleted from user where username = ? 
+2020-02-18 17:28:40,752 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: wyz(String)
+2020-02-18 17:28:40,822 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2020-02-18 17:32:22,002 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-02-18 17:32:32,201 INFO (StartupInfoLogger.java:61)- Started UserApplication in 14.968 seconds (JVM running for 16.668)
+2020-02-18 17:32:36,282 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select id, username, password, salt, nickname, phone, create_time, update_time, deleted from user where username = ? 
+2020-02-18 17:32:36,315 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: wyz(String)
+2020-02-18 17:32:36,351 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2020-02-18 18:13:09,821 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-02-18 18:13:22,739 INFO (StartupInfoLogger.java:61)- Started UserApplication in 16.656 seconds (JVM running for 19.196)
+2020-02-18 18:13:34,205 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select id, username, password, salt, nickname, phone, create_time, update_time, deleted from user where username = ? 
+2020-02-18 18:13:34,240 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: wyz(String)
+2020-02-18 18:13:34,277 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wyz.coffee.dao.UserCouponDao">
+    <select id="selectByUsername" parameterType="java.lang.String" resultMap="com.wyz.coffee.dao.generated.UserCouponMapper.BaseResultMap">
+        select
+        <include refid="com.wyz.coffee.dao.generated.UserCouponMapper.Base_Column_List"/>
+        from user_coupon
+        where username = #{username,jdbcType=VARCHAR}
+        and destroy_time &gt;= now()
+        and used = 0
+    </select>
+
+    <update id="setUsed" parameterType="java.lang.Integer">
+    update user_coupon
+    set used = 1
+    where coupon_id = #{couponId, jdbcType=INTEGER}
+  </update>
+</mapper>

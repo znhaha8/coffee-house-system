@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wyz.coffee.dao.UserRoleDao">
+  <resultMap id="BaseResultMap" type="com.wyz.coffee.entity.UserRole">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="role_id" jdbcType="INTEGER" property="roleId" />
+    <result column="creat_time" jdbcType="TIMESTAMP" property="creatTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, user_id, role_id, creat_time
+  </sql>
+
+  <insert id="insertIgnore" parameterType="com.wyz.coffee.entity.UserRole">
+    insert ignore
+    into user_role
+    (user_id, role_id, creat_time)
+    values (#{userId,jdbcType=INTEGER}, #{roleId,jdbcType=INTEGER},
+      #{creatTime,jdbcType=TIMESTAMP})
+  </insert>
+
+  <select id="selectByUserId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from user_role
+    where user_id = #{userId,jdbcType=INTEGER}
+  </select>
+
+  <delete id="deleteByUserId">
+    delete from user_role
+    where user_id = #{userId,jdbcType=INTEGER}
+  </delete>
+
+</mapper>

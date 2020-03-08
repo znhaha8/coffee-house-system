@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="coffee-house-order" />
+        <module name="coffee-house-common" />
+        <module name="coffee-house-discovery" />
+        <module name="coffee-house-discount" />
+        <module name="coffee-house-user" />
+        <module name="coffee-house-product" />
+        <module name="coffee-house-gateway" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="asdas" target="1.8" />
+      <module name="coffee-house-auth" target="1.8" />
+      <module name="coffee-house-auth-api" target="1.8" />
+      <module name="coffee-house-commondf" target="1.8" />
+      <module name="coffee-house-redis" target="1.8" />
+      <module name="coffee-house-shiro" target="1.8" />
+      <module name="fch" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="asdas" options="-parameters" />
+      <module name="coffee-house-auth" options="-parameters" />
+      <module name="coffee-house-auth-api" options="-parameters" />
+      <module name="coffee-house-common" options="-parameters" />
+      <module name="coffee-house-commondf" options="-parameters" />
+      <module name="coffee-house-discount" options="-parameters" />
+      <module name="coffee-house-discovery" options="-parameters" />
+      <module name="coffee-house-gateway" options="-parameters" />
+      <module name="coffee-house-order" options="-parameters" />
+      <module name="coffee-house-product" options="-parameters" />
+      <module name="coffee-house-redis" options="-parameters" />
+      <module name="coffee-house-shiro" options="-parameters" />
+      <module name="coffee-house-user" options="-parameters" />
+      <module name="fch" options="-parameters" />
+    </option>
+  </component>
+</project>

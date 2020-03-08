@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/coffee-house-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/coffee-house-discovery" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/coffee-house-gateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/coffee-house-redis" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/coffee-house-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/coffee-house-service/coffee-house-discount" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/coffee-house-service/coffee-house-order" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/coffee-house-service/coffee-house-product" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/coffee-house-service/coffee-house-user" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

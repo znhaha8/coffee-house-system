@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wyz.coffee.dao.OrderDao">
+
+  <select id="selectByUsernameAccurately" parameterType="java.lang.String" resultMap="com.wyz.coffee.dao.generated.OrderMapper.BaseResultMap">
+    select 
+    <include refid="com.wyz.coffee.dao.generated.OrderMapper.Base_Column_List" />
+    from tb_order
+    where username = #{username,jdbcType=INTEGER}
+  </select>
+
+  <select id="selectByUsername" parameterType="java.lang.String" resultMap="com.wyz.coffee.dao.generated.OrderMapper.BaseResultMap">
+    select
+    <include refid="com.wyz.coffee.dao.generated.OrderMapper.Base_Column_List" />
+    from tb_order
+    where username like CONCAT(CONCAT('%', #{username,jdbcType=VARCHAR}), '%')
+  </select>
+
+  <update id="setUnsuccessful" parameterType="java.lang.String">
+    update
+    tb_order
+    set success = 0
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+
+  <select id="selectSellsAndTurnover" resultType="com.wyz.coffee.dto.SellsDto">
+    select
+    count(*) as sells,sum(total) as turnover
+    from tb_order
+    where create_time &gt;= #{startTime,jdbcType=TIMESTAMP}
+    and create_time &lt;= #{endTime,jdbcType=TIMESTAMP}
+    and success = 1;
+  </select>
+
+</mapper>

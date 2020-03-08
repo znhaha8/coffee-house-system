@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wyz.coffee.dao.UserDao">
+
+  <select id="selectByUsername" parameterType="java.lang.String" resultMap="com.wyz.coffee.dao.generated.UserMapper.BaseResultMap">
+    select
+    <include refid="com.wyz.coffee.dao.generated.UserMapper.Base_Column_List" />
+    from user
+    where username like CONCAT(CONCAT('%', #{username,jdbcType=VARCHAR}), '%')
+  </select>
+
+  <select id="selectByUsernameAccurately" parameterType="java.lang.String" resultMap="com.wyz.coffee.dao.generated.UserMapper.BaseResultMap">
+    select
+    <include refid="com.wyz.coffee.dao.generated.UserMapper.Base_Column_List" />
+    from user
+    where username = #{username,jdbcType=VARCHAR}
+  </select>
+
+  <select id="selectByUsernameAndRoleId" resultMap="com.wyz.coffee.dao.generated.UserMapper.BaseResultMap">
+    select
+    <include refid="com.wyz.coffee.dao.generated.UserMapper.Base_Column_List" />
+    from user
+    where username like CONCAT(CONCAT('%', #{username,jdbcType=VARCHAR}), '%')
+    <if test="roleId != -1">
+      and id in (select user_id from user_role where role_id = #{roleId,jdbcType=INTEGER})
+    </if>
+  </select>
+
+  <update id="updateByUsernameSelective" parameterType="com.wyz.coffee.entity.User">
+    update user
+    <set>
+      <if test="password != null">
+        password = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="salt != null">
+        salt = #{salt,jdbcType=VARCHAR},
+      </if>
+      <if test="nickname != null">
+        nickname = #{nickname,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null">
+        phone = #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deleted != null">
+        deleted = #{deleted,jdbcType=BIT},
+      </if>
+    </set>
+    where username = #{username,jdbcType=VARCHAR}
+  </update>
+
+</mapper>
